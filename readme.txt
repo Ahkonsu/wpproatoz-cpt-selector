@@ -1,68 +1,71 @@
 /*
-Plugin Name:       WPProAtoZ CPT Selector for Elementor
-Plugin URI:        https://wpproatoz.com
-Description:       Easily select multiple Custom Post Types from a dedicated settings page and display them as a clean, linked list using the shortcode [cpt_list]. Automatically respects the custom Archive Slug set in ACF Post Types (Advanced Configuration > URLs tab). Perfect for use with Elementor via the Shortcode widget.
-Version:           1.2.0
+Plugin Name: WPProAtoZ CPT Selector for Elementor
+Plugin URI: https://wpproatoz.com
+Description: Select multiple Custom Post Types and display them as a fully styled linked list using [cpt_list]. Features a powerful Styling tab with colors, borders, padding, margin, and more. Perfect for Elementor.
+Version: 1.2.5
 Requires at least: 6.0
-Requires PHP:      8.0
-Author:            WPProAtoZ.com
-Author URI:        https://wpproatoz.com
-Text Domain:       wpproatoz-cpt-selector
-Update URI:        https://github.com/Ahkonsu/wpproatoz-cpt-selector/releases
+Requires PHP: 8.0
+Author: WPProAtoZ.com
+Author URI: https://wpproatoz.com
+Text Domain: wpproatoz-cpt-selector
+Update URI: https://github.com/Ahkonsu/wpproatoz-cpt-selector/releases
 GitHub Plugin URI: https://github.com/Ahkonsu/wpproatoz-cpt-selector/releases
-GitHub Branch:     main
+GitHub Branch: main
 */
 
 # WPProAtoZ CPT Selector for Elementor
 
 ## Description
+**WPProAtoZ CPT Selector for Elementor** is a lightweight yet powerful WordPress plugin that lets you select any number of Custom Post Types from a central settings page and display them as a beautiful, fully customizable linked list.
 
-**WPProAtoZ CPT Selector for Elementor** is a lightweight and user-friendly WordPress plugin that lets you select any number of Custom Post Types from a central settings page and display them as a beautiful linked list on any page.
+It works seamlessly with **Elementor** (via the Shortcode widget) and fully supports **Advanced Custom Fields (ACF) Post Types**. Links automatically use the custom Archive Slug set in ACF.
 
-It works seamlessly with **Elementor** (using the Shortcode widget) and fully supports **Advanced Custom Fields (ACF) Post Types**. The plugin automatically links each post type name to its archive page, using the **custom Archive Slug** you set in ACF (under Advanced Configuration → URLs tab).
+Now includes a comprehensive **Styling tab** so you can control colors, borders, spacing, and more directly from the admin dashboard — no extra CSS needed!
 
-Ideal for directory sites, portfolio showcases, service listings, or any site that needs a quick navigation list of custom post type archives.
+Ideal for directory sites, portfolio showcases, service listings, or any site that needs a clean navigation list of custom post type archives.
 
 ## Features
-
-- **Dedicated Settings Page** – Select multiple Custom Post Types from one clean admin screen (no more per-page metaboxes).
-- **Settings Link** on the Plugins page for quick access.
-- **Automatic Archive Linking** – Uses the custom **Archive Slug** defined in ACF Post Types (respects `has_archive` and rewrite rules).
-- **Shortcode Support** – Simple `[cpt_list]` shortcode, fully compatible with Elementor.
-- **Customizable Output** – Change wrapper (`ul`/`div`) and add your own CSS class via shortcode attributes.
-- **Lightweight & Clean** – No unnecessary assets or bloat. Includes subtle default styling.
-- **ACF Compatible** – Works whether you created CPTs with ACF, CPT UI, or code.
+- **Dedicated Settings Page** with two tabs: **General** and **Styling**
+- **Rich Styling Options**:
+  - Background Color
+  - Border (Color, Style, Width, Radius)
+  - Padding (inside) & Margin (outside)
+  - Font Size, Line Spacing, Link & Hover Colors
+  - List Style (disc, circle, square, none)
+  - Custom CSS field for advanced users
+- **Automatic Archive Linking** – Respects custom Archive Slug from ACF Post Types
+- **Shortcode Support** – `[cpt_list]` fully compatible with Elementor
+- **Customizable Output** – Change wrapper (`ul`/`div`) and add your own CSS class
+- **Settings Link** directly on the Plugins page
+- **Lightweight & Clean** – No bloat, loads only what’s needed
+- **ACF Compatible** – Works with ACF, CPT UI, or manually coded post types
 
 ## Installation
-
-1. Upload the `wpproatoz-cpt-selector` folder to your `/wp-content/plugins/` directory.
-2. Activate the plugin through the **Plugins** screen in WordPress.
-3. Go to **Settings → WPProAtoZ CPT List** to configure which custom post types to display.
-4. Use the shortcode `[cpt_list]` anywhere (especially inside Elementor Shortcode widget).
+1. Upload the `wpproatoz-cpt-selector` folder to `/wp-content/plugins/`
+2. Activate the plugin through the WordPress Plugins screen
+3. Go to **Settings → WPProAtoZ CPT List** to select your post types and customize styling
+4. Use the shortcode `[cpt_list]` anywhere (especially in Elementor)
 
 ## Requirements
-
 - WordPress 6.0 or higher
 - PHP 8.0 or higher
 - **Advanced Custom Fields** (Free or Pro) – Recommended for full Archive Slug support
-- Custom Post Types (created via ACF Post Types, CPT UI, or code)
+- Custom Post Types (created via any method)
 
 ## Usage
 
 ### Configuring the Plugin
+1. Go to **Settings → WPProAtoZ CPT List**
+2. On the **General** tab, select the Custom Post Types you want to display
+3. Switch to the **Styling** tab to customize appearance
+4. Click **Save Changes**
 
-1. After activation, go to **Settings → WPProAtoZ CPT List**.
-2. Select the Custom Post Types you want to display (hold **Ctrl** / **Command** to select multiple).
-3. Click **Save Changes**.
-
-### Displaying the List
-
-Use this shortcode in any page, post, or **Elementor Shortcode widget**:
-
-### shortcode
+### Shortcode
+```shortcode
 [cpt_list]
 [cpt_list wrapper="ul" class="my-custom-cpt-list"]
 [cpt_list wrapper="div" class="cpt-grid"]
+
 wrapper → ul (default) or div
 class → Add your own CSS class for custom styling
 
@@ -76,6 +79,14 @@ Shortcode in Elementor – Adding the [cpt_list] shortcode using Elementor’s S
 Frontend Display – Example of the linked custom post types list on the front end.<img src="screenshot-3.png" alt="Frontend CPT List">
 
 ### Changelog
+
+1.2.5 – April 24, 2026
+
+Major update: Added full Styling tab in admin dashboard
+New styling options: Background, Border (color/style/width/radius), Padding, Margin, Font Size, Line Spacing, Link/Hover colors, and Custom CSS
+Improved admin interface with proper tab handling and cross-tab saving
+Enhanced dynamic CSS output with better sanitization
+Updated plugin description and documentation
 
 1.2.0 – April 2026
 

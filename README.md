@@ -64,26 +64,31 @@ Advanced Custom Fields (Free or Pro) – Recommended for custom Archive Slug sup
 Custom Post Types (created via ACF, CPT UI, or manually)
 
 ### Changelog
-1.2.0 – April 2026
 
-Major New Feature: Automatic linking to custom post type archive pages.
-Now fully respects the Archive Slug set in ACF Post Types → Advanced Configuration → URLs tab.
-Graceful fallback to default archive link when no custom slug is set.
-Improved shortcode output with proper escaping and link handling.
-Updated plugin description, documentation, and screenshots section.
 
-1.1.0
+**1.2.5 – April 24, 2026**
+- Added comprehensive styling panel with tabs (General + Styling)
+- New styling options:
+  - Background Color
+  - Padding (inside)
+  - Margin (outside)
+  - Border Color, Style, Width, and Radius
+  - Font Size, Line Spacing, Link & Hover Colors
+  - Custom CSS field
+- Improved admin interface with proper cross-tab saving
+- Enhanced default styles and sanitization
+- Updated plugin description and documentation
 
-Converted from per-page ACF metabox to a dedicated plugin settings page.
-Added "Settings" link directly on the Plugins screen.
-Cleaner admin interface with better instructions.
-Shortcode now pulls from centralized plugin option.
+**1.2.0 – April 2026**
+- Automatic linking to custom post type archive pages (ACF Archive Slug support)
+- Improved shortcode output and escaping
 
-1.0.0
+**1.1.0**
+- Converted to dedicated plugin settings page
+- Added Settings link on Plugins page
 
-Initial release.
-Basic shortcode support with custom class and wrapper options.
-Default styling for unordered lists.
+**1.0.0**
+- Initial release
 
 ### Support
 For questions, feature requests, or issues, please contact support@wpproatoz.com or open an issue on the GitHub repository.
