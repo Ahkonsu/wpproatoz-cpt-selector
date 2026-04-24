@@ -16,7 +16,9 @@ Select any number of Custom Post Types once in the plugin settings, and display 
 The plugin automatically links each post type name to its archive page, using the **custom Archive Slug** you configure in **ACF > Post Types > Advanced Configuration > URLs tab**.
 
 ## Features
-
+- Dedicated Settings page with **General** and **Styling** tabs
+- Full visual styling controls (colors, borders, padding, margin, etc.)
+- WordPress Color Picker with manual hex input
 - **Dedicated Settings Page** — Select multiple Custom Post Types from one clean admin screen (no per-page metaboxes).
 - **Settings Link** on the Plugins page for quick access.
 - **Automatic Archive Linking** — Fully respects the custom **Archive Slug** set in ACF Post Types.
