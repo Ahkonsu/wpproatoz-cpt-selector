@@ -16,6 +16,23 @@ Select any number of Custom Post Types once in the plugin settings, and display 
 The plugin automatically links each post type name to its archive page, using the **custom Archive Slug** you configure in **ACF > Post Types > Advanced Configuration > URLs tab**.
 
 ## Features
+- **Native Elementor Widgets** – Drag & drop experience with real-time preview
+  - **CPT List Widget** – Display any selection of Custom Post Types
+  - **Taxonomy Terms Widget** – Display categories, tags, or custom taxonomies
+- **Per-Widget Flexibility** – Choose different post types or taxonomies for each widget (overrides global settings)
+- **Comprehensive Live Styling** – Full design controls directly in Elementor:
+  - Background Color (Global Colors supported)
+  - Border (style, width, color, radius)
+  - Padding & Margin
+  - Link Color + Hover Color
+  - Font Size & Line Height
+- **Global Settings Page** – Dedicated admin panel with **General** and **Styling** tabs for site-wide defaults
+- **Smart Archive Linking** – Automatically respects custom Archive Slugs set in **ACF Post Types**
+- **Taxonomy Filtering** – Filter terms by specific Custom Post Types
+- **Multiple Output Options** – `<ul>` or `<div>` wrapper + custom CSS classes
+- **Lightweight & Clean** – No bloat, excellent performance
+- **Shortcode Support** – `[cpt_list]` works anywhere (including non-Elementor pages)
+- **Global Colors Compatible** – Works seamlessly with Elementor Site Settings
 - Dedicated Settings page with **General** and **Styling** tabs
 - Full visual styling controls (colors, borders, padding, margin, etc.)
 - WordPress Color Picker with manual hex input
