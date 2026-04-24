@@ -13,30 +13,35 @@
  * GitHub Plugin URI: https://github.com/Ahkonsu/wpproatoz-cpt-selector/releases
  * GitHub Branch:     main
  */
-////***check for updates code
-
-require 'plugin-update-checker-5.5/plugin-update-checker.php';
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-
-try {
-    $myUpdateChecker = PucFactory::buildUpdateChecker(
-        'https://github.com/Ahkonsu/wpproatoz-cpt-selector/',
-        __FILE__,
-        'wpproatoz-cpt-selector'
-    );
-
-    //Set the branch that contains the stable release.
-    $myUpdateChecker->setBranch('main');
-
-    //$myUpdateChecker->getVcsApi()->enableReleaseAssets();
-    
-    //Optional: If you're using a private repository, specify the access token like this:
-    //$myUpdateChecker->setAuthentication('your-token-here');
-////
-
-if ( ! defined( 'ABSPATH' ) ) {
+ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
+
+////***check for updates code
+
+/**
+ * === Plugin Update Checker ===
+ * GitHub: https://github.com/YahnisElsts/plugin-update-checker
+ */
+if ( ! class_exists( 'YahnisElsts\PluginUpdateChecker\v5\PucFactory' ) ) {
+    require_once __DIR__ . '/plugin-update-checker/plugin-update-checker.php';
+}
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/Ahkonsu/wpproatoz-cpt-selector/',  // Repository URL
+    __FILE__,                                             // Main plugin file
+    'wpproatoz-cpt-selector'                              // Plugin slug
+);
+
+// Set the branch (optional but recommended)
+$myUpdateChecker->setBranch('main');
+
+// Optional: Enable release assets if you attach .zip files to GitHub releases
+// $myUpdateChecker->getVcsApi()->enableReleaseAssets();
+
+
 
 /**
  * Add Settings page
