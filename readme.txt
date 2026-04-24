@@ -2,7 +2,7 @@
 Plugin Name: WPProAtoZ CPT Selector for Elementor
 Plugin URI: https://wpproatoz.com
 Description: Select multiple Custom Post Types and display them as a fully styled linked list using [cpt_list]. Features a powerful Styling tab with colors, borders, padding, margin, and more. Perfect for Elementor.
-Version: 1.2.5
+Version: 1.3.0
 Requires at least: 6.0
 Requires PHP: 8.0
 Author: WPProAtoZ.com
@@ -79,6 +79,27 @@ Shortcode in Elementor – Adding the [cpt_list] shortcode using Elementor’s S
 Frontend Display – Example of the linked custom post types list on the front end.<img src="screenshot-3.png" alt="Frontend CPT List">
 
 ### Changelog
+
+1.3.0 – April 2026**
+- **Major Feature**: Full native Elementor widget integration
+- Added **"CPT List (WPProAtoZ)"** widget with:
+  - Per-widget Custom Post Type selection (multi-select)
+  - Full live styling controls (Box + Links)
+  - Support for Elementor Global Colors
+- Added **"Taxonomy Terms List (WPProAtoZ)"** widget with:
+  - Multi-taxonomy selection (Categories, Tags, custom taxonomies, etc.)
+  - Optional filter by specific Custom Post Types
+  - Full live styling controls (Box + Links)
+  - Support for Elementor Global Colors
+- Both widgets include:
+  - Background Color, Border (with Group Control), Border Radius
+  - Padding & Margin controls
+  - Link Color + Hover Color
+  - Font Size & Line Height
+  - Custom CSS Class support
+- New **WPProAtoZ** category in Elementor panel
+- Global Settings page remains fully functional (widgets can override per instance)
+- Improved code structure and performance
 
 1.2.5 – April 24, 2026
 

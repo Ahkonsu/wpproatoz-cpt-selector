@@ -67,6 +67,26 @@ Custom Post Types (created via ACF, CPT UI, or manually)
 
 ### Changelog
 
+**1.3.0 – April 2026**
+- **Major Feature**: Full native Elementor widget integration
+- Added **"CPT List (WPProAtoZ)"** widget with:
+  - Per-widget Custom Post Type selection (multi-select)
+  - Full live styling controls (Box + Links)
+  - Support for Elementor Global Colors
+- Added **"Taxonomy Terms List (WPProAtoZ)"** widget with:
+  - Multi-taxonomy selection (Categories, Tags, custom taxonomies, etc.)
+  - Optional filter by specific Custom Post Types
+  - Full live styling controls (Box + Links)
+  - Support for Elementor Global Colors
+- Both widgets include:
+  - Background Color, Border (with Group Control), Border Radius
+  - Padding & Margin controls
+  - Link Color + Hover Color
+  - Font Size & Line Height
+  - Custom CSS Class support
+- New **WPProAtoZ** category in Elementor panel
+- Global Settings page remains fully functional (widgets can override per instance)
+- Improved code structure and performance
 
 **1.2.5 – April 24, 2026**
 - Added comprehensive styling panel with tabs (General + Styling)

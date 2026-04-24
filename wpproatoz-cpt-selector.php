@@ -3,7 +3,7 @@
  * Plugin Name: WPProAtoZ CPT Selector for Elementor
  * Plugin URI: https://wpproatoz.com
  * Description: Select multiple Custom Post Types and display them as a fully styled linked list using the shortcode [cpt_list]. Supports ACF custom Archive Slugs with rich admin styling controls.
- * Version: 1.2.5
+ * Version: 1.3.0
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: WPProAtoZ.com
@@ -289,3 +289,30 @@ function wpproatoz_cpt_plugin_action_links( $links ) {
     return $links;
 }
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpproatoz_cpt_plugin_action_links' );
+
+
+/* === Elementor Integration === */
+function wpproatoz_cpt_register_elementor_widget( $widgets_manager ) {
+    require_once( __DIR__ . '/widgets/cpt-list-widget.php' );
+    $widgets_manager->register( new \WPProAtoZ_CPT_List_Widget() );
+}
+add_action( 'elementor/widgets/register', 'wpproatoz_cpt_register_elementor_widget' );
+
+/* === Elementor Widget Category === */
+function wpproatoz_cpt_elementor_category( $elements_manager ) {
+    $elements_manager->add_category(
+        'wpproatoz',
+        [
+            'title' => __( 'WPProAtoZ', 'wpproatoz-cpt-selector' ),
+            'icon'  => 'fa fa-plug',
+        ]
+    );
+}
+add_action( 'elementor/elements/categories_registered', 'wpproatoz_cpt_elementor_category' );
+
+/* === Elementor Taxonomy Widget Registration === */
+function wpproatoz_cpt_register_elementor_taxonomy_widget( $widgets_manager ) {
+    require_once( __DIR__ . '/widgets/taxonomy-terms-widget.php' );
+    $widgets_manager->register( new \WPProAtoZ_Taxonomy_Terms_Widget() );
+}
+add_action( 'elementor/widgets/register', 'wpproatoz_cpt_register_elementor_taxonomy_widget' );
